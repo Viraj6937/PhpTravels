@@ -40,6 +40,11 @@ public class AutoTest extends Base {
 		LandingPage lp = new LandingPage(driver);
 	  	
 		lp.getMyAccountBtnClick();
+		
+		
+		
+		
+		
 	  	
 	}
 	
