@@ -8,6 +8,7 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import ObjectRepository.LandingPage;
+import ObjectRepository.LoginPage;
 import Resources.Base;
 
 public class AutoTest extends Base {
@@ -30,6 +31,7 @@ public class AutoTest extends Base {
 	@Test
 	public void T1() {
 		
+		
 		//------ Validate The LandingPage By Getting Title --------->
 		
 	  	System.out.println(driver.getTitle());
@@ -41,8 +43,21 @@ public class AutoTest extends Base {
 	  	
 		lp.getMyAccountBtnClick();
 		
+		lp.getLoginLinkClick();
 		
 		
+		
+		//----------- Login Validation ---------------->
+		
+		LoginPage lp2 = new LoginPage(driver);
+		
+		lp2.getUserName().sendKeys("user@phptravels.com");
+		
+		lp2.getPassword().sendKeys("demouser");
+		
+		lp2.getLoginBtn().click();
+		
+		lp2.getUserVerifiedText();
 		
 		
 	  	

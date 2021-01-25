@@ -13,8 +13,14 @@ public class LandingPage {
 	
 	//---- My Account Button Click ----------->
 	
-
 	private By MyAccntBtn = By.xpath("//div[@class='mini-menu']//ul//li[3]//div[@class='dropdown dropdown-login dropdown-tab']//a");
+	
+
+	//--------- Login Link Click ------------------->
+	
+	private By LoginClk = By.xpath("//div[@class='mini-menu']//ul//li[3]//div[@class='dropdown dropdown-login dropdown-tab show']//div//div//a[1]");
+	
+	
 	
 	
 	
@@ -39,6 +45,28 @@ public class LandingPage {
 		ac.build().perform();
 		
 	}
+	
+	
+
+	
+	public void getLoginLinkClick() {
+		
+	    boolean aa  =driver.findElement(LoginClk).isDisplayed();
+		
+	    if(aa)
+	    {
+	    	
+	    	driver.findElement(LoginClk).click();
+	    	
+	    }
+	    else
+	    {
+	    	System.out.println("No Link is been displayed to Click ");
+	    }
+	    
+		
+	}
+	
 	
 	
 
