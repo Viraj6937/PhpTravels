@@ -16,7 +16,7 @@ public class Base {
 	
 	public WebDriver InitializeDriver() throws IOException {
 		
-		String file = System.getProperty("user.dir")+"\\src\\main\\java\\data.properties";
+		String file = System.getProperty("user.dir")+"\\src\\main\\java\\Resources\\data.properties";
 		
 		FileInputStream fis = new FileInputStream(file);
 		
